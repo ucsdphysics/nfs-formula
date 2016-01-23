@@ -8,7 +8,7 @@ include:
   mount.mounted:
     - device: {{ m[1].location }}
     - fstype: nfs
-    - opts: {{ m[1].opts|default('vers=3') }}
+    - opts: {{ m[1].opts|default('defaults') }}
     - persist: {{ m[1].persist|default('True') }}
     - mkmnt: {{ m[1].mkmnt|default('True') }}
 {% endfor %}
